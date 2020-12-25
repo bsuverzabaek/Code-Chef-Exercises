@@ -7,7 +7,7 @@ int main(void){
 		printf("Input T: ");
 		scanf("%d",&T);
 
-		if(T<=0 || T>180){
+		if(T<=0 || T>1000){
 			printf("T must be 1 <= T <= 1000\n");
 		}else{
 			break;
