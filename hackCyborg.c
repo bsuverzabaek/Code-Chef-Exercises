@@ -49,7 +49,7 @@ int main(void){
 			while(1){
 				scanf("%d",&A[i]);
 				if(A[i]<=0 || A[i]>1000000000){
-					printf("A[%d] must be 1 <= A[i] <= 10^6\n",i);
+					printf("A[%d] must be 1 <= A[i] <= 10^9\n",i);
 				}else{
 					break;
 				}
