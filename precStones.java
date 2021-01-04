@@ -1,3 +1,6 @@
+//Problems when B=2 && segment length = 1
+//If segment length is >8, exception in thread occurs
+
 import java.util.*;
 
 public class precStones{
@@ -19,7 +22,6 @@ public class precStones{
 
 		for(int t=1;t<=T;t++){
 			while(true){
-				//String S;
 				S = scan.next();
 
 				if(S.length()<=0 || S.length()>100000){
@@ -30,7 +32,7 @@ public class precStones{
 			}
 
 			int N = S.length();
-			Stack<Integer> A = new Stack<Integer>();
+			Vector<Integer> A = new Vector<Integer>(N);
 			int i = 0;
 
 			while(i<N){
@@ -40,13 +42,13 @@ public class precStones{
 					j++;
 				}
 
-				A.push(j-i);
+				A.add(j-i);
 				i = j;
 			}
 
 			if(A.size()>1 && S.charAt(0)==S.charAt(N-1)){
 				A.set(0,A.get(0)+A.get(A.size()-1));
-				A.pop();
+				A.remove(A.size()-1);
 			}
 
 			int B = 0;
@@ -78,21 +80,19 @@ public class precStones{
 						ans = 3;
 					}
 				}else{
-					//Stack<Integer> aCopy = new Stack<Integer>();
-					//Object[] aCopy = A.toArray();
-					Object aCopy = (Stack)A.clone();
-					//aCopy = A.clone();
+					//Object aCopy = (Vector)A.clone();
+					Vector<Integer> aCopy = new Vector<Integer>(N);
+					for(int a=0;a<A.size();a++){
+						aCopy.set(i,A.get(i));
+					}
+				
 					aCopy.remove(B);
-					/*for(int a=0;a<aCopy.length;a++){
-						if(aCopy[i]==B){
-							aCopy[i] = 0;
-						}
-					}*/
+				
 					int B1 = 0;
 					
-					for(int a=0;a<aCopy.length;a++){
-						if(aCopy[i]>B1){
-							B1 = aCopy[i];
+					for(int a=0;a<aCopy.size();a++){
+						if(aCopy.get(i)>B1){
+							B1 = aCopy.get(i);
 						}
 					}
 
