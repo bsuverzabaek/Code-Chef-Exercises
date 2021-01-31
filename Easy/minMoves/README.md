@@ -1,4 +1,4 @@
-#The Minimum Number of Moves
+# The Minimum Number of Moves
 
 Little chief has his own restaurant in the city. There are N workers there. Each worker has his own salary. 
 The salary of the i-th worker equals to Wi (i = 1, 2, ..., N). 
@@ -8,17 +8,17 @@ In other words, the chosen worker is the loser, who will be the only worker, who
 But loser-worker can be different for different operations, of course. Chief can use this operation as many times as he wants. But he is a busy man. 
 That's why he wants to minimize the total number of operations needed to equalize all workers. Your task is to find this number.
 
-##Input
+## Input
 
 The first line of the input contains an integer T denoting the number of test cases. 
 The description of T test cases follows. The first line of each test case contains a single integer N denoting the number of workers. 
 The second line contains N space-separated integers W1, W2, ..., WN denoting the salaries of the workers.
 
-##Output
+## Output
 
 For each test case, output a single line containing the minimum number of operations needed to equalize all workers.
 
-##Constraints
+## Constraints
 
 1 ≤ T ≤ 100
 
@@ -26,7 +26,7 @@ For each test case, output a single line containing the minimum number of operat
 
 0 ≤ Wi ≤ 10000 (10^4)
 
-##Input:
+## Input:
 
 2
 
@@ -38,13 +38,13 @@ For each test case, output a single line containing the minimum number of operat
 
 42 42
 
-##Output:
+## Output:
 
 3
 
 0
 
-##Explanation
+## Explanation
 
 Example Case 1. Chief can equalize all salaries in 3 turns:
 
