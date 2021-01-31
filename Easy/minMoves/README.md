@@ -46,3 +46,6 @@ Explanation
 
 Example Case 1. Chief can equalize all salaries in 3 turns:
 
+<img width="562" alt="Screen Shot 2021-01-30 at 11 26 28 PM" src="https://user-images.githubusercontent.com/69542867/106376521-57b75480-6353-11eb-90b2-f233bb9f188b.png">
+
+Example Case 2. All salaries are already equal. He doesn't need to do anything.
