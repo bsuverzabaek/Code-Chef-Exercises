@@ -26,7 +26,9 @@ For each test case, output a single line containing the minimum number of operat
 
 0 ≤ Wi ≤ 10000 (10^4)
 
-## Input:
+## Example
+
+### Input:
 
 2
 
@@ -38,7 +40,7 @@ For each test case, output a single line containing the minimum number of operat
 
 42 42
 
-## Output:
+### Output:
 
 3
 
