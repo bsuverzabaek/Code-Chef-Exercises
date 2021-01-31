@@ -23,13 +23,13 @@ The first number is the number of particles in chamber 0, the second number is t
 
 ## Example
 
-Input:
+### Input:
 
 3
 1
 3
 
-Output:
+### Output:
 
 1
 1 
