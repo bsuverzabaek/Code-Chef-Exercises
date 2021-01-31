@@ -42,3 +42,7 @@ Output:
 
 0
 
+Explanation
+
+Example Case 1. Chief can equalize all salaries in 3 turns:
+
