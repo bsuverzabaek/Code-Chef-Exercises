@@ -13,3 +13,48 @@ In his version, at the end of each round, the **cumulative** score for each play
 Once all the rounds are over the player who had the maximum lead at the end of any round in the game is declared the winner.
 
 Consider the following score sheet for a game with 5 rounds:
+
+<img width="557" alt="Screen Shot 2021-02-01 at 9 11 06 PM" src="https://user-images.githubusercontent.com/69542867/106551248-17321500-64d2-11eb-877e-265451f1bff8.png">
+
+The total scores of both players, the leader and the lead after each round for this game is given below:
+
+<img width="556" alt="Screen Shot 2021-02-01 at 9 11 15 PM" src="https://user-images.githubusercontent.com/69542867/106551249-17caab80-64d2-11eb-9a3e-e5030f10a73f.png">
+
+Note that the above table contains the cumulative scores.
+
+The winner of this game is Player 1 as he had the maximum lead (58 at the end of round 1) during the game.
+
+Your task is to help the Manager find the winner and the winning lead. 
+You may assume that the scores will be such that there will always be a single winner. That is, there are no ties.
+
+## Input
+
+The first line of the input will contain a single integer N (N ≤ 10000) indicating the number of rounds in the game. 
+Lines 2,3,...,N+1 describe the scores of the two players in the N rounds. 
+Line i+1 contains two integer S<sub>i</sub> and T<sub>i</sub>, the scores of the Player 1 and 2 respectively, in round i. 
+You may assume that 1 ≤ S<sub>i</sub> ≤ 1000 and 1 ≤ T<sub>i</sub> ≤ 1000.
+
+## Output
+
+Your output must consist of a single line containing two integers W and L, where W is 1 or 2 and 
+indicates the winner and L is the maximum lead attained by the winner.
+
+## Example
+
+### Input:
+
+5
+
+140 82
+
+89 134
+
+90 110
+
+112 106
+
+88 90
+
+### Output:
+
+1 58
