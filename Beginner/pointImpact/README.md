@@ -51,8 +51,7 @@ We are given a 5 by 5 board. We shoot the ball from coordinates (4,4), and we ne
 coordinates after it has collided with sides 5 times. 
 However, after shooting, the ball goes directly to the corner (5,5), and stops there. So we report the coordinates (5,5).
 
-
-
+<img width="369" alt="Screen Shot 2021-02-01 at 11 32 05 PM" src="https://user-images.githubusercontent.com/69542867/106563133-94688480-64e8-11eb-8005-01f6c60a1d25.png">
 
 ### Case 2
 
@@ -60,3 +59,5 @@ We are given a 5 by 5 board. We shoot the ball from the coordinates (3,1), and w
 coordinates after it has collided with the sides twice. 
 After shooting, it first hits the right side at (5,3), and then the top side at (3,5). 
 So, we report (3,5).
+
+<img width="428" alt="Screen Shot 2021-02-01 at 11 32 20 PM" src="https://user-images.githubusercontent.com/69542867/106563137-94688480-64e8-11eb-8b81-a87f6ca1238a.png">
