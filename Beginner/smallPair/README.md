@@ -17,7 +17,6 @@ For each test case, output a single line containing a single integer - the small
 
 ## Constraints
 
-- T = 10, 2 ≤ N ≤ 10<sup>5</sup>
 - 1 ≤ a<sub>i</sub> ≤ 10<sup>6</sup>
 
 ## Example
