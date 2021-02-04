@@ -9,7 +9,7 @@ To get the required amount of water, Chef can mix some water obtained from the f
 Mixing v<sub>x</sub> volume of water at temperature t<sub>x</sub> with v<sub>y</sub> volume of water at 
 temperature t<sub>y</sub> yields v<sub>x</sub>+v<sub>y</sub> volume of water at temperature calculated as
 
-
+<img width="93" alt="Screen Shot 2021-02-03 at 11 51 43 PM" src="https://user-images.githubusercontent.com/69542867/106856311-80a15780-667b-11eb-8fbd-08e7fe6bb16c.png">
 
 Help Chef figure out if it is possible for him to take a bath with at 
 least v<sub>3</sub> volume of water at temperature t<sub>3</sub>.
