@@ -41,17 +41,9 @@ For each game, output one integer denoting the total number of coins showing the
 
 2
 
-1
+1 5 1 
 
-5 
-
-1 
-
-1 
-
-5 
-
-2
+1 5 2
 
 ### Output:
 
