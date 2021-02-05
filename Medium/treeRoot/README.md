@@ -65,9 +65,4 @@ For each test case, output on a line a space separated list of all possible valu
 There is only one node, which is clearly the root. 
 In the second test case, there are two non-isomorphic trees that satisfy the constraints, as seen in the following picture:
 
-
-
-
-
-
-
+<img width="154" alt="Screen Shot 2021-02-05 at 12 24 01 AM" src="https://user-images.githubusercontent.com/69542867/107002998-47371d80-6749-11eb-98b5-3d1e583876ab.png">
