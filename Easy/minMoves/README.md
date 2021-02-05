@@ -1,7 +1,7 @@
 # The Minimum Number of Moves
 
 Little chief has his own restaurant in the city. There are N workers there. Each worker has his own salary. 
-The salary of the i-th worker equals to Wi (i = 1, 2, ..., N). 
+The salary of the i-th worker equals to W<sub>i</sub> (i = 1, 2, ..., N). 
 Once, chief decided to equalize all workers, that is, he wants to make salaries of all workers to be equal. 
 But for this goal he can use only one operation: choose some worker and increase by 1 salary of each worker, except the salary of the chosen worker. 
 In other words, the chosen worker is the loser, who will be the only worker, whose salary will be not increased during this particular operation. 
@@ -12,7 +12,7 @@ That's why he wants to minimize the total number of operations needed to equaliz
 
 The first line of the input contains an integer T denoting the number of test cases. 
 The description of T test cases follows. The first line of each test case contains a single integer N denoting the number of workers. 
-The second line contains N space-separated integers W1, W2, ..., WN denoting the salaries of the workers.
+The second line contains N space-separated integers W<sub>1</sub>, W<sub>2</sub>, ..., W<sub>N</sub> denoting the salaries of the workers.
 
 ## Output
 
@@ -24,7 +24,7 @@ For each test case, output a single line containing the minimum number of operat
 
 1 ≤ N ≤ 100
 
-0 ≤ Wi ≤ 10000 (10^4)
+0 ≤ Wi ≤ 10000 (10<sup>4</sup>)
 
 ## Example
 
@@ -48,8 +48,13 @@ For each test case, output a single line containing the minimum number of operat
 
 ## Explanation
 
-Example Case 1. Chief can equalize all salaries in 3 turns:
+### Case 1
+
+Chief can equalize all salaries in 3 turns:
 
 <img width="562" alt="Screen Shot 2021-01-30 at 11 26 28 PM" src="https://user-images.githubusercontent.com/69542867/106376521-57b75480-6353-11eb-90b2-f233bb9f188b.png">
 
-Example Case 2. All salaries are already equal. He doesn't need to do anything.
+### Case 2 
+
+All salaries are already equal. He doesn't need to do anything.
+
