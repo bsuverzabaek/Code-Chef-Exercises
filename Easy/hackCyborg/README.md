@@ -5,7 +5,7 @@ Doctor Kunj installed new software on cyborg Shresth. This software introduced S
 Cyborg Shresth thought of T different problems in each of which you will be given an array A of length N and an array B of length M. 
 In each of these problems, you have to calculate:
 
-
+<img width="232" alt="Screen Shot 2021-02-04 at 11 08 38 PM" src="https://user-images.githubusercontent.com/69542867/106996637-90ce3b00-673e-11eb-9547-ae8994234ddc.png">
 
 Where rangeMin(i,j) returns the minimum element in the range of indices i to j (both included) in array A.
 
@@ -23,6 +23,7 @@ It is given that array B consists of pairwise distinct elements and is in ascend
 
 For each different problem, print on a new line the answer to the problem, i.e. the value of
 
+<img width="232" alt="Screen Shot 2021-02-04 at 11 08 38 PM" src="https://user-images.githubusercontent.com/69542867/106996637-90ce3b00-673e-11eb-9547-ae8994234ddc.png">
 
 ## Constraints
 
