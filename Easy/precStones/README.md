@@ -6,9 +6,7 @@ The i<sup>th</sup> stone is connected with ((i+1)%n)<sup>th</sup> stone for each
 
 Nemo defines beauty factor B of a chain as the maximum number of consecutive stones of same type.
 
-
-
-
+<img width="247" alt="Screen Shot 2021-02-04 at 11 31 22 PM" src="https://user-images.githubusercontent.com/69542867/106998612-012a8b80-6742-11eb-9dd9-c996bf3ca983.png">
 
 In the chain above, the beauty factor is B = 4 because there are 4 consecutive Amber in the chain.
 
@@ -53,5 +51,4 @@ Case 2: 4
 
 Case 1 represents the figure in the problem statement. Nemo can exchange one Amber with a Ruby and reduce B to 3.
 
-
-
+<img width="247" alt="Screen Shot 2021-02-04 at 11 31 22 PM" src="https://user-images.githubusercontent.com/69542867/106998612-012a8b80-6742-11eb-9dd9-c996bf3ca983.png">
