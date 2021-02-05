@@ -1,183 +1,110 @@
-//This code has problems when B=2
-//Segmentation fault also occurs
-
 #include <stdio.h>
 #include <string.h>
-#include <stdlib.h>
-#include <stdbool.h>
-
-typedef struct{
-	int *Data;
-	int Size;
-	int Count;
-} Stack;
-
-Stack *CreateStack(int size){
-	Stack *A = (Stack*)malloc(sizeof(Stack));
-	A->Data = (int*)malloc(sizeof(int)*size);
-	A->Size = size;
-	A->Count = 0;
-
-	if(A==NULL){
-		printf("Cannot allocate memory\n");
-		exit(1);
-	}else{
-		return A;
-	}
-}
-
-void PushStack(Stack *A, int x){
-	if(A->Count == A->Size){
-		printf("Stack Overflow\n");
-		exit(1);
-	}
-
-	A->Data[A->Count] = x;
-	A->Count++;
-}
-
-int stackCount(Stack *A){
-	return A->Count;
-}
-
-bool compFunc(Stack *A){
-	if(A->Data[0] == A->Data[stackCount(A)]){
-		return true;
-	}else{
-		return false;
-	}
-}
-
-void addEl(Stack *A){
-	A->Data[0] += A->Data[stackCount(A)];
-}
-
-int maxFunc(Stack *A){
-	int max = 0;
-	for(int i=0;i<A->Count;i++){
-		if(A->Data[i]>max){
-			max = A->Data[i];
-		}
-	}
-	return max;
-}
-
-void copyFunc(Stack *A, Stack *A_copy){
-	for(int i=0;i<A->Count;i++){
-		A_copy->Data[i] = A->Data[i];
-		A_copy->Count++;
-	}
-}
-
-void changeEl(Stack *A_copy, int B){
-	for(int i=0;i<A_copy->Count;i++){
-		if(A_copy->Data[i]==B){
-			A_copy->Data[i]=0;
-		}
-	}
-}
-
-int maxFunc2(int a, int b){
-	if(a>b){
-		return a;
-	}else{
-		return b;
-	}
-}
-
-void PopStack(Stack *A){
-	if(A->Count == 0){
-		printf("Stack Underflow\n");
-		exit(1);
-	}
-
-	A->Count--;
-}
-
-void DisposeStack(Stack *A){
-	free(A->Data);
-	free(A);
-}
+#include <assert.h>
 
 int main(void){
-	int T;
-	Stack *A;
-	Stack *A_copy;
+	int T,l,j1,j2,sp,ans;
+	int l1=0,l2=0,lt=1,singl=0;
+	char S[100000];
 
-	while(1){
-		printf("Input T: ");
-		scanf("%d",&T);
+	scanf("%d",&T);
+	assert(T>=1 && T<=2500);
 
-		if(T<=0 || T>2500){
-			printf("T must be 1 <= T <= 2500\n");
-		}else{
-			break;
-		}
-	}
-
-	for(int t=1;t<=T;t++){
-		char S[100000];
+	for(int i=1;i<=T;i++){
 		scanf("%s",S);
 
-		int N = strlen(S);
-
-		A = CreateStack(N);
-	
-		int i = 0;
-
-		while(i<N){
-			int j = i + 1;
-
-			while(j<N && S[i]==S[j]){
-				j++;
-			}
-
-			PushStack(A,j-i);
-			i = j;
+		for(int i=0;i<strlen(S);i++){
+			assert(S[i]=='A' || S[i]=='R');
 		}
 
-		if(stackCount(A)>1 && compFunc(A)){
-			addEl(A);
-			PopStack(A);
+		l = strlen(S);
+		j1 = 1;
+
+		while(S[0]==S[j1]){
+			j1++;
 		}
 
-		int B = maxFunc(A);
-		int ans;
-
-		if(stackCount(A)==1){
-			if(B==1){
-				ans = 1;
+		if(j1==l){
+			if(j1==1){
+				printf("Case %d: %d\n",i,1);
 			}else{
-				ans = B-1;
+				printf("Case %d: %d\n",i,l-1);
 			}
-		}else{
-			if(B==1){
-				if(stackCount(A)==2){
-					ans = 2;
-				}else{
-					ans = 3;
+
+			goto last;
+		}
+
+		sp = j1;
+
+		do{
+			j2 = j1;
+			lt = 1;
+
+			if(j2==l-1){
+				j2 = -1;
+			}
+
+			while(S[j1]==S[j2+1]){
+				lt++;
+				j2++;
+
+				if(j2==l-1){
+					j2 = -1;
 				}
-			}else if(B==2){
-				if(stackCount(A)==1){
-					ans = 2;
-				}else{
-					ans = 3;
+			}
+
+			if(lt==1){
+				singl++;
+			}
+
+			if(lt>l2){
+				l2 = lt;
+
+				if(l2>l1){
+					lt = l1;
+					l1 = l2;
+					l2 = lt;
 				}
+			}
+
+			j1 = j2 + 1;
+
+		}while(sp!=j1);
+
+		if(l1>2){
+			l1 /= 2;
+
+			if(l1>l2){
+				printf("Case %d: %d\n",i,l1);
 			}else{
-				A_copy = CreateStack(N);
-				copyFunc(A,A_copy);
-				PopStack(A);
-				changeEl(A_copy,B);
-				int B1 = maxFunc(A_copy);
-				ans = maxFunc2(B/2,B1);
+				printf("Case %d: %d\n",i,l2);
+			}
+
+			goto last;
+		}
+
+		if(l1==1){
+			if(singl==2){
+				printf("Case %d: %d\n",i,2);
+			}else{
+				printf("Case %d: %d\n",i,3);
+			}
+
+			goto last;
+		}
+
+		if(l1==2){
+			if(singl>0){
+				printf("Case %d: %d\n",i,2);
+			}else{
+				printf("Case %d: %d\n",i,3);
 			}
 		}
 
-		printf("Case %d: %d\n",t,ans);
+		last:
+			singl = 0;
+			l1 = l2 = 0;
 	}
-
-	DisposeStack(A);
-	DisposeStack(A_copy);
 
 	return 0;
 }

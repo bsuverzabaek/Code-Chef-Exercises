@@ -1,110 +1,92 @@
-//Problems when B=2 && segment length = 1
-//If segment length is >8, exception in thread occurs
-
+//run as java -ea precStones
 import java.util.*;
+import java.io.*;
 
 public class precStones{
-	public static void main(String[] args) {
-		int T;
-		String S;
-		Scanner scan = new Scanner(System.in);
+	public static void main(String[] args) throws IOException{
+		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		StringBuilder out = new StringBuilder("");
+		StringTokenizer st;
 
-		while(true){
-			System.out.print("Input T: ");
-			T = scan.nextInt();
+		int T = Integer.parseInt(br.readLine());
+		assert(T>=1 && T<=2500);
 
-			if(T<=0 || T>2500){
-				System.out.println("T must be 1 <= T <= 2500");
-			}else{
-				break;
+		char[] S,pat;
+		int[] a;
+		int index,size,n;
+
+		for(int ca=1;ca<=T;ca++){
+			S = br.readLine().toCharArray();
+			n = S.length;
+
+			assert(n>=1 && n<=100000);
+			for(int i=0;i<n;i++){
+				assert(S[i]=='A' || S[i]=='R');
 			}
+
+
+			pat = new char[n];
+			a = new int[n];
+			size = 0;
+
+			out = out.append("Case "+ca+": ");
+
+			for(int i=0;i<n;i++){
+				char c = S[i];
+
+				while(i<n && S[i]==c){
+					a[size]++;
+					i++;
+				}
+
+				i--;
+				pat[size++] = c;
+			}
+
+			if(size==1){
+				out = out.append((a[0]==1?1:a[0]-1)+"\n");
+				continue;
+			}
+
+			if(size!=1 && pat[size-1]==pat[0]){
+				a[0] += a[size-1];
+				size--;
+			}
+
+			index = 0;
+
+			for(int i=1;i<size;i++){
+				if(a[i]>a[index]){
+					index = i;
+				}
+			}
+
+			if(a[index]==1){
+				out = out.append(size==2?"2\n":"3\n");
+				continue;
+			}
+
+			if(a[index]==2){
+				boolean flag = true;
+
+				for(int i=0;flag && i<size;i++){
+					flag = !(a[i]==2 && (a[(i-1+size)%size]==1 || a[(i+1)%size]==1));
+				}
+
+				out = out.append(flag?"3\n":"2\n");
+				continue;
+			}
+
+			a[index] /= 2;
+			index = 0;
+
+			for(int i=0;i<size;i++){
+				index = (int)Math.max(index,a[i]);
+			}
+
+			out = out.append(index+"\n");
 		}
 
-		for(int t=1;t<=T;t++){
-			while(true){
-				S = scan.next();
-
-				if(S.length()<=0 || S.length()>100000){
-					System.out.println("String S must be 1 <= S <= 10^5");
-				}else{
-					break;
-				}
-			}
-
-			int N = S.length();
-			Vector<Integer> A = new Vector<Integer>(N);
-			int i = 0;
-
-			while(i<N){
-				int j = i + 1;
-
-				while(j<N && S.charAt(i)==S.charAt(j)){
-					j++;
-				}
-
-				A.add(j-i);
-				i = j;
-			}
-
-			if(A.size()>1 && S.charAt(0)==S.charAt(N-1)){
-				A.set(0,A.get(0)+A.get(A.size()-1));
-				A.remove(A.size()-1);
-			}
-
-			int B = 0;
-			for(int a=0;a<A.size();a++){
-				if(A.get(a)>B){
-					B = A.get(a);
-				}
-			}
-
-			int ans;
-
-			if(A.size()==1){
-				if(B==1){
-					ans = 1;
-				}else{
-					ans = B-1;
-				}
-			}else{
-				if(B==1){
-					if(A.size()==2){
-						ans = 2;
-					}else{
-						ans = 3;
-					}
-				}else if(B==2){
-					if(A.size()==1){
-						ans = 2;
-					}else{
-						ans = 3;
-					}
-				}else{
-					//Object aCopy = (Vector)A.clone();
-					Vector<Integer> aCopy = new Vector<Integer>(N);
-					for(int a=0;a<A.size();a++){
-						aCopy.set(i,A.get(i));
-					}
-				
-					aCopy.remove(B);
-				
-					int B1 = 0;
-					
-					for(int a=0;a<aCopy.size();a++){
-						if(aCopy.get(i)>B1){
-							B1 = aCopy.get(i);
-						}
-					}
-
-					if((B/2)>B1){
-						ans = B/2;
-					}else{
-						ans = B1;
-					}
-				}
-			}
-
-			System.out.println("Case "+t+": "+ans);
-		}
+		System.out.print(out);
 	}
 }
