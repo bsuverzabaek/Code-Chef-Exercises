@@ -1,7 +1,7 @@
 # Magic Elements
 
 You are given an array A with size N and a number K. 
-Let's call a position i (1 ≤ i ≤ N) valid if, after increasing Ai by K, it would be greater than the sum of all other elements in the array A.
+Let's call a position i (1 ≤ i ≤ N) valid if, after increasing A<sub>i</sub> by K, it would be greater than the sum of all other elements in the array A.
 
 Determine the number of distinct valid positions.
 
