@@ -28,17 +28,15 @@ int main(void){
 		int D[N];
 		int V[N];
 
+		m1 = 0;
+		m2 = 0;
+
 		for(int i=0;i<N;i++){
 			scanf("%d %d",&D[i],&V[i]);
 
 			assert(D[i]>=1 && D[i]<=M);
 			assert(V[i]>=1 && V[i]<=1000000000);
-		}
 
-		m1 = 0;
-		m2 = 0;
-
-		for(int i=0;i<N;i++){
 			if(V[i]>m1){
 				m1 = V[i];
 				j = i;

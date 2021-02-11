@@ -31,19 +31,17 @@ public class eatTwice{
 			int[] D = new int[N];
 			int[] V = new int[N];
 
+			m1 = 0;
+			m2 = 0;
+			j = 0;
+
 			for(int i=0;i<N;i++){
 				D[i] = scan.nextInt();
 				V[i] = scan.nextInt();
 
 				assert(D[i]>=1 && D[i]<=M) : "D["+i+"] must be 1 <= D[i] <= M";
 				assert(V[i]>=1 && V[i]<=1000000000) : "D["+i+"] must be 1 <= V[i] <= 10^9";
-			}
 
-			m1 = 0;
-			m2 = 0;
-			j = 0;
-
-			for(int i=0;i<N;i++){
 				if(V[i]>m1){
 					m1 = V[i];
 					j = i;
