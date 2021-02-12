@@ -5,8 +5,7 @@ Mike is a famous traveler. He visits about 100 countries a year and buys the fla
 Mike knows, that there are some flags, that correspond to one pattern, but colored in different ways. 
 In this problem we consider only five 2,2cm✕1,1cm patterns of flags:
 
-
-
+<img width="485" alt="Screen Shot 2021-02-11 at 10 32 20 PM" src="https://user-images.githubusercontent.com/69542867/107733775-114de800-6cb9-11eb-9cdb-cb9927a25ea8.png">
 
 There are N different colors available to paint the flags and the colors are denoted by integers from 1 to N.
 Mike wants you to count the number of different well-painted flags. We call a flag well-painted if it's made according to the following algorithm:
@@ -58,6 +57,8 @@ For each testcase, output a single line containing an integer - the answer for t
 ## Explanation
 
 There are four different well-painted flags for N = 2 different colors :
+
+<img width="435" alt="Screen Shot 2021-02-11 at 10 32 29 PM" src="https://user-images.githubusercontent.com/69542867/107733777-127f1500-6cb9-11eb-8e66-b021a8156b65.png">
 
 ## Text Version of Pictures
 
