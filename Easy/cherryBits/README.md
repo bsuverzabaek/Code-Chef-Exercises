@@ -63,18 +63,14 @@ Print the matrix, in the form of N strings, after performing all the queries.
 
 After processing the 1st query 1 1 1 1, matrix becomes:
 
-
+<img width="49" alt="Screen Shot 2021-02-19 at 12 28 15 AM" src="https://user-images.githubusercontent.com/69542867/108472024-6f467680-7249-11eb-8d75-3ad321ed3a4a.png">
 
 After processing the 2nd query 2 2 2 2, the matrix becomes:
 
-
+<img width="45" alt="Screen Shot 2021-02-19 at 12 28 22 AM" src="https://user-images.githubusercontent.com/69542867/108472025-6fdf0d00-7249-11eb-9023-0c40ab518c54.png">
 
 After processing the 3rd query 1 1 2 2, matrix becomes:
 
-
+<img width="44" alt="Screen Shot 2021-02-19 at 12 28 29 AM" src="https://user-images.githubusercontent.com/69542867/108472027-6fdf0d00-7249-11eb-8ef4-f602abf006f2.png">
 
 We need to output the matrix after processing all queries.
-
-
-
-
