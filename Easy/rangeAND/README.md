@@ -2,6 +2,7 @@
 
 You are given positive integers L and R. You have to find the sum
 
+<img width="238" alt="Screen Shot 2021-02-28 at 5 38 38 PM" src="https://user-images.githubusercontent.com/69542867/109439600-3e560680-79ec-11eb-9245-afe263cc283e.png">
 
 where ∧ denotes the bitwise AND operation. Since the sum could be large, compute it modulo 10<sup>9</sup>+7.
 
