@@ -49,6 +49,6 @@ Output K space separated integers where the i<sup>th</sup> integer denotes the i
 
 ### Case 1
 
-<img width="290" alt="Screen Shot 2021-03-03 at 5 34 39 PM" src="https://user-images.githubusercontent.com/69542867/109891709-c7687a00-7c46-11eb-9603-5b9bfcec134a.png">
+<img width="293" alt="Screen Shot 2021-03-03 at 5 35 59 PM" src="https://user-images.githubusercontent.com/69542867/109891812-f5e65500-7c46-11eb-8079-2fe2440d0376.png">
 
 The first 4 elements of it are [8, 7, 4, 4].
