@@ -30,7 +30,7 @@ However, if Shyam can give him dare tasks 3 and 100, then Ram will not be able t
 - The first line of each test case contains a single integer t<sub>r</sub>.
 - The second line contains t<sub>r</sub> space-separated integers T<sub>r,1</sub>,T<sub>r,2</sub>,…,T<sub>r,t<sub>r</sub></sub>.
 - The third line contains a single integer d<sub>r</sub>.
-- The fourth line contains d<sub>r</sub> space-separated integers D<subr,1</sub>,D<sub>r,2</sub>,…,D<sub>r,d<sub>r</sub></sub>.
+- The fourth line contains d<sub>r</sub> space-separated integers D<sub>r,1</sub>,D<sub>r,2</sub>,…,D<sub>r,d<sub>r</sub></sub>.
 - The fifth line contains a single integer t<sub>s</sub>.
 - The sixth line contains t<sub>s</sub> space-separated integers T<sub>s,1</sub>,T<sub>s,2</sub>,…,T<sub>s,t<sub>s</sub></sub>.
 - The seventh line contains a single integer d<sub>s</sub>.
