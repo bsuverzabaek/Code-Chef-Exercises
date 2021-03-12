@@ -44,23 +44,20 @@ For each test case, output a single line containing a single integer donating mi
 
 The initial configuration is:
 
-
+<img width="123" alt="Screen Shot 2021-03-12 at 12 26 29 AM" src="https://user-images.githubusercontent.com/69542867/110906772-a8fb2200-82c9-11eb-80fb-4747414f44ca.png">
 
 We can tell the child who is **boldened** to move counter-clockwise, and the new configuration will be:
 
-
-
+<img width="134" alt="Screen Shot 2021-03-12 at 12 26 36 AM" src="https://user-images.githubusercontent.com/69542867/110906774-a993b880-82c9-11eb-9362-a321b16e99e9.png">
 
 because he has moved to the first empty chair on his way.
 
 Now, we again tell him to move counter-clockwise, and now the new configuration will be:
 
-
-
+<img width="140" alt="Screen Shot 2021-03-12 at 12 26 43 AM" src="https://user-images.githubusercontent.com/69542867/110906775-aa2c4f00-82c9-11eb-96d0-907eead0fdbf.png">
 
 because he moved counter-clockwise, found an occupied chair, and hence kept moving. The next chair was vacant, and he sat down there.
 
 Note that, in this example, we moved the same child twice, but this need not be the case. We can move different children in different moves.
 
 You can check that this is the best we can do, and 2 is the minimum.
-
