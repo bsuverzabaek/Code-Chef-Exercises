@@ -4,10 +4,10 @@ A number is called a square free number if there does not exist a number greater
 For example, number 8 is not a square free number as number 4 (which is square of 2), divides 8. 
 Similarly, number 4 is also not a square free number. However numbers 1, 3, 6 all are square free numbers.
 
-A number n is called a good number if following properties hold.
+A number N is called a good number if following properties hold.
 
 - It is a square free number.
-- Let s denote the sum of all divisors of n (including non-trivial divisors like 1 and itself). Let c denote the number of prime numbers dividing s. Number c should be a prime number.
+- Let s denote the sum of all divisors of N (including non-trivial divisors like 1 and itself). Let c denote the number of prime numbers dividing s. Number c should be a prime number.
 
 You will two numbers L, R, you have to find sum of divisors (including non-trivial) of all the good numbers in the range L to R, both inclusive.
 
