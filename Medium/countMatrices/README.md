@@ -1,4 +1,4 @@
-# Coutning Matrices
+# Counting Matrices
 
 Lira loves Linear Algebra and she is especially keen about matrix :)
 
