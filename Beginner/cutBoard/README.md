@@ -52,5 +52,6 @@ For each test case, print a single line containing one integer — the maximum p
 
 ### Case 1
 
-The edges cut by Suzumo in one optimal solution are marked by red lines.
+<img width="267" alt="Screen Shot 2021-05-30 at 12 01 06 AM" src="https://user-images.githubusercontent.com/69542867/120093970-d68e8500-c0da-11eb-8689-6697d50f4a9a.png">
 
+The edges cut by Suzumo in one optimal solution are marked by red lines.
