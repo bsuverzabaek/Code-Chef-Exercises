@@ -43,3 +43,5 @@ Output a list of space-separated integers in ascending order — the indices of 
 ## Explanation
 
 The reporting structure:
+
+<img width="362" alt="Screen Shot 2021-08-23 at 11 56 20 PM" src="https://user-images.githubusercontent.com/69542867/130564394-3e061096-1e37-44a5-b9d8-f76bf085f51a.png">
